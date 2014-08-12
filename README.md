@@ -2,6 +2,9 @@ angular-currency-input
 ======================
 
 Angular html input directive.  You edit the value as a number, see it as a currency, just like excel.
+```html
+    <input angular-currency-input type="text" ng-model="MyValue"></input>
+```
 
 
 # angular-currency-input
