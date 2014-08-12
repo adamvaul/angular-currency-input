@@ -19,7 +19,7 @@ Add a script reference in your index.html page like so
 
 Add the 'angular-currency-input' module to your application dependencies like so.
 ```javascript
-app = angular.module("myApp", ["angularCurrencyInput"])
+var app = angular.module("myApp", ["angularCurrencyInput"])
 ```
 
 Use it
