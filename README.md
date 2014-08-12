@@ -1,14 +1,10 @@
 angular-currency-input
 ======================
 
-Angular html input directive.  You edit the value as a number, see it as a currency, just like excel.
+An Angular html input directive.  You edit the value as a number, see it as a currency, just like excel.
 ```html
     <input angular-currency-input type="text" ng-model="MyValue"></input>
 ```
-
-
-# angular-currency-input
-
 angularCurrencyInput is an [Angular.js](http://angularjs.org/) input directive that creates an input like an excel spreadsheet cell that is formatted like a currency.  You see the number as a currency, but when editing it reverts to a simple number
 
 ## To use
