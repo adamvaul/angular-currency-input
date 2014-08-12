@@ -20,5 +20,8 @@ angularCurrencyInput is an [Angular.js](http://angularjs.org/) input directive t
 app = angular.module("myApp", ["angularCurrencyInput"])
 ```
 4.  Use it
+```html
+    <input angular-currency-input type="text" ng-model="MyValue"></input>
+```
 
 
