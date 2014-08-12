@@ -10,18 +10,15 @@ angularCurrencyInput is an [Angular.js](http://angularjs.org/) input directive t
 ## To use
 
 Include the angular-currency-input.js in your project 
-
 Add a script reference in your index.html page like so
 ```html
     <script src="js/angular-currency-input.js"></script>
 ```
-
 Add the 'angular-currency-input' module to your application dependencies like so.
 ```javascript
     var app = angular.module("myApp", ["angularCurrencyInput"])
 ```
-
-Use it
+Use it in your html pages.
 ```html
     <input angular-currency-input type="text" ng-model="MyValue"></input>
 ```
