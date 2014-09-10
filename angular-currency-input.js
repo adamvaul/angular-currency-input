@@ -12,6 +12,13 @@ angularCurrencyInput.directive('angularCurrencyInput', ['$timeout', '$filter',
             restrict: 'A',
             require: '?ngModel',
             link: function (scope, element, attrs, ctrl) {
+                
+                //Set the watch
+                scope.$watch(attrs.ngModel, function () {
+                    if (element[0] != document.activeElement) {
+                        setInputValue();
+                    }
+                });
 
                 //function to return null or actual currency value
                 var formatCurrency = function (value) {
@@ -21,7 +28,7 @@ angularCurrencyInput.directive('angularCurrencyInput', ['$timeout', '$filter',
                         return $filter('currency')(value);
                     }
                 };
-                
+
                 //function to get the value for the model object from the scope
                 var getModelValue = function () {
                     return scope.$eval(attrs.ngModel);
@@ -44,10 +51,6 @@ angularCurrencyInput.directive('angularCurrencyInput', ['$timeout', '$filter',
                     }, 0);
                 };
 
-                //Set the initial formatted value as currency
-                setInputValue();
-
-
                 //Set the value to the actual raw value for editing
                 element.bind('focus', function () {
                     var data = getModelValue();
@@ -58,6 +61,10 @@ angularCurrencyInput.directive('angularCurrencyInput', ['$timeout', '$filter',
                 element.bind('blur', function () {
                     setInputValue();
                 });
+
+
+                //Set the initial formatted value as currency
+                setInputValue();
 
             }
         };
